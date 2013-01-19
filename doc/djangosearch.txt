@@ -1,0 +1,16 @@
+*djangosearch.txt*	Django directory search class and def. 
+
+===============================================================================
+CONTENTS~
+
+    1. Commands ........................... |DjangoSearch-commands|
+
+===============================================================================
+                                                      *DjangoSearch-introduction*
+COMMANDS~
+
+                                                                     *:DjangoClass *
+:DjangoClass {ClassName}
+
+                                                                     *:DjangoDef *
+:DjangoDef {FunctionName}                                                                     
