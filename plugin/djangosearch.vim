@@ -73,8 +73,7 @@ function! s:NewSearch()
     function! l:search_viewer.word_search(type) dict
         let g:word = expand("<cword>")
 
-
-        call self.fsgrep("class", g:word)
+        call self.fsgrep(a:type, g:word)
     endfunction
 
 
@@ -101,7 +100,7 @@ command! -bar -complete=file -bang -nargs=1 DjangoWordSearch     :call s:_search
 "" Let's start right now :)
 
 "" { CTRL + d }
-nnoremap <silent> <C-d> :DjangoWordSearch('def')<CR>
+nnoremap <silent> <C-d> :DjangoWordSearch def<CR>
 
 "" { CTRL + c }
-nnoremap <silent> <C-c> :DjangoWordSearch('class')<CR>
+nnoremap <silent> <C-c> :DjangoWordSearch class<CR>
