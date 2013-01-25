@@ -25,7 +25,7 @@ Add this to your ~/.vimrc
 Runtime
 ------------
 
-`:DjangoClass User` and cursor keyboard shortcuts `CTRL + d`
+`:DjangoClass User` and cursor keyboard shortcuts `CTRL + c`
 
     django/conf/__init__.py       
         138: class UserSettingsHolder(BaseSettings):
@@ -52,7 +52,7 @@ Runtime
      
      
      
-`:DjangoDef filter` and cursor keyboard shortcuts `CTRL + c`
+`:DjangoDef filter` and cursor keyboard shortcuts `CTRL + d`
 
                                                                 
     django/db/models/manager.py 
