@@ -1,7 +1,7 @@
-vim-djangosearch
+vim-search
 ============
 
-"django" folder in the instructions you need to make a call. Sample commands `:DjangoClass {classname}` and 
+"search" folder in the instructions you need to make a call. Sample commands `:SearchClass {classname}` and 
 `:DjangoDef {functionname}`.
 
 
@@ -9,14 +9,14 @@ Installation
 ------------
 
 Add this to your ~/.vimrc
-> let g:djangosearch_path = 'djangoPath'
+> let g:search_path = '/'
 
 
 ~/.vim directory add:
 
 `autoload/filesearch.vim` 
 
-`plugin/djangosearch.vim`
+`plugin/vimsearch.vim`
 
 `plugin/filesearch.vim`
 
@@ -25,7 +25,7 @@ Add this to your ~/.vimrc
 Runtime
 ------------
 
-`:DjangoClass User` and cursor keyboard shortcuts `CTRL + c`
+`:SearchClass User` and cursor keyboard shortcuts `CTRL + c`
 
     django/conf/__init__.py       
         138: class UserSettingsHolder(BaseSettings):
@@ -52,7 +52,7 @@ Runtime
      
      
      
-`:DjangoDef filter` and cursor keyboard shortcuts `CTRL + d`
+`:SearchDef filter` and cursor keyboard shortcuts `CTRL + d`
 
                                                                 
     django/db/models/manager.py 
