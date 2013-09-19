@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""  DjangoSearch Vim PLugin
-""  @github http://github.com/yasaricli/vim-djangosearch
+""  VimSearch Vim PLugin
+""  @github http://github.com/yasaricli/VimSearch
 ""
 ""  Copyright 2013 Yaşar İÇLİ
 ""
@@ -24,7 +24,7 @@ function! s:NewSearch()
     function! l:search_viewer.warning(msg) dict
 
         echohl WarningMsg
-        echomsg "DjangoSearch Error ::: ".a:msg
+        echomsg "VimSearch Error ::: ".a:msg
         echohl NONE
     endfunction    
 
@@ -33,35 +33,35 @@ function! s:NewSearch()
     function! l:search_viewer.fsgrep(type, name) dict
    
 
-        "" if not g:djangosearch_path variable in .vimrc  WarningMsg
-        if !exists("g:djangosearch_path") 
+        "" if not g:search_path variable in .vimrc  WarningMsg
+        if !exists("g:search_path") 
 
-            call self.warning(".vimrc file django_search_path added a django folder, you have to be.")
+            call self.warning(".vimrc file _search_path added a  folder, you have to be.")
 
         "" WarningMsg not directory    
-        elseif !isdirectory(g:djangosearch_path)
+        elseif !isdirectory(g:search_path)
 
-            call self.warning("Error django path")
-            call self.warning("See and control path: ".g:djangosearch_path)
+            call self.warning("Error  path")
+            call self.warning("See and control path: ".g:search_path)
 
         "" Execute Command     
         else
-            execute 'Fsgrep /'.a:type.' '.a:name.'/python, '.g:djangosearch_path.'/**'
+            execute 'Fsgrep /'.a:type.' '.a:name.'/python, '.g:search_path.'/**'
         endif
     endfunction
 
 
-    "" Django folder within the Class searches
-    "" @call djangosearch#FsgrepBase
-    function! l:search_viewer.django_class(classname) dict
+    ""  folder within the Class searches
+    "" @call search#FsgrepBase
+    function! l:search_viewer._class(classname) dict
        
        call self.fsgrep('class', a:classname) 
     endfunction
     
     
-    "" Django folder with in the Function searches
-    "" @call djangosearch#FsgrepBase
-    function! l:search_viewer.django_def(defname) 
+    ""  folder with in the Function searches
+    "" @call search#FsgrepBase
+    function! l:search_viewer._def(defname) 
     
         call self.fsgrep('def', a:defname) 
     endfunction
@@ -86,13 +86,13 @@ endfunction
 let s:_search = s:NewSearch()
 
 
-"" Django Class and Def Search Commands
-command! -bar -complete=file -bang -nargs=1 DjangoClass   :call s:_search.django_class(<q-args>)
-command! -bar -complete=file -bang -nargs=1 DjangoDef     :call s:_search.django_def(<q-args>)
+""  Class and Def Search Commands
+command! -bar -complete=file -bang -nargs=1 SearchClass   :call s:_search._class(<q-args>)
+command! -bar -complete=file -bang -nargs=1 SearchDef     :call s:_search._def(<q-args>)
 
 
-"" -bar :DjangoWordSearch def --> search cursor def line.
-command! -bar -complete=file -bang -nargs=1 DjangoWordSearch     :call s:_search.word_search(<q-args>)
+"" -bar :WordSearch def --> search cursor def line.
+command! -bar -complete=file -bang -nargs=1 WordSearch     :call s:_search.word_search(<q-args>)
 
 
 "" KEYUP { CTRL + d } search selected cursor def
@@ -100,7 +100,7 @@ command! -bar -complete=file -bang -nargs=1 DjangoWordSearch     :call s:_search
 "" Let's start right now :)
 
 "" { CTRL + d }
-nnoremap <silent> <C-d> :DjangoWordSearch def<CR>
+nnoremap <silent> <C-d> :WordSearch def<CR>
 
 "" { CTRL + c }
-nnoremap <silent> <C-c> :DjangoWordSearch class<CR>
+nnoremap <silent> <C-c> :WordSearch class<CR>

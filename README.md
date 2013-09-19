@@ -1,4 +1,4 @@
-vim-search
+ViewSearch
 ============
 
 "search" folder in the instructions you need to make a call. Sample commands `:SearchClass {classname}` and 
@@ -9,7 +9,7 @@ Installation
 ------------
 
 Add this to your ~/.vimrc
-> let g:search_path = '/'
+> let g:search_path = '/home'
 
 
 ~/.vim directory add:
