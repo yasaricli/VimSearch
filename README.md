@@ -2,7 +2,7 @@ vim-search
 ============
 
 "search" folder in the instructions you need to make a call. Sample commands `:SearchClass {classname}` and 
-`:DjangoDef {functionname}`.
+`:SearchDef {functionname}`.
 
 
 Installation
