@@ -8,10 +8,8 @@ ViewSearch
 Installation
 ------------
 
-Add this to your ~/.vimrc
-
-![alt tag](http://yasaricli.com/assets/images/search_path.jpg)
-
+Add this to virtualenv path your ~/.vimrc
+    let g:search_path = '/Users/yasaricli/Desktop/Projects/.envs/markafoni/lib/python2.7/site-packages/django'
 
 
 ~/.vim directory add:
@@ -28,11 +26,6 @@ Runtime
 ------------
 
 `:SearchClass User` and cursor keyboard shortcuts `CTRL + c`
-
-![alt tag](http://yasaricli.com/assets/images/search_class.jpg)
-     
      
 `:SearchDef filter` and cursor keyboard shortcuts `CTRL + d`
-
-![alt tag](http://yasaricli.com/assets/images/search_def.jpg)
 
