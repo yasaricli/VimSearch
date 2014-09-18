@@ -9,7 +9,7 @@ Installation
 ------------
 
 Add this to virtualenv path your ~/.vimrc
-    let g:search_path = '/Users/yasaricli/Desktop/Projects/.envs/markafoni/lib/python2.7/site-packages/django'
+    `let g:search_path = '/Users/yasaricli/Desktop/Projects/.envs/markafoni/lib/python2.7/site-packages/django'`
 
 
 ~/.vim directory add:
